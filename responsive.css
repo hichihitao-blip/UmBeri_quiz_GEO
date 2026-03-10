@@ -403,7 +403,7 @@
    }
     
     .frame__map-container {
-        width: 620px;
+        width: 627px;
         height: 385px;
         top: 27px;
         right: 27px;
@@ -508,4 +508,5 @@
         width: 53px;
         height: 54px;
     }
+
 }
