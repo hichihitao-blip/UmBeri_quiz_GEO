@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тренажер "Названия стран"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Хедер -->
+        <header class="header">
+            <nav class="header__nav">
+                <!-- МЕНЮ -->
+                <div class="main-menu__container">
+                    <div class="main-menu">
+                        <div class="main-menu__logo-container">
+                            <div class="main-menu__logo"></div>
+                        </div>
+                        <div class="main-menu__links-container">
+                            <a href="#" class="nav-link nav-link--trainers">тренажеры</a>
+                            <a href="#" class="nav-link nav-link--workouts">тренировки</a>
+                            <a href="#" class="nav-link nav-link--create">создать тренажер</a>
+                            <a href="#" class="nav-link nav-link--about">о проекте</a>
+                        </div>
+                    </div>
+                </div> 
+                <!-- МАЛЕНЬКЕ МЕНЮ -->
+                <div class="small-menu__container">
+                    <div class="small-menu">
+                        <a href="#" class="small-menu__icon small-menu__icon--ring">
+                            <img src="images/ring_icon.svg" alt="Иконка колокольчика">
+                        </a>
+                        <a href="#" class="small-menu__icon small-menu__icon--profile">
+                            <img src="images/profile_icon.svg" alt="Иконка профиля пользователя">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <!-- КОНТЕЙНЕР САЙДБАРА И РАМКИ -->
+            <div class="game-container">
+                <!-- САЙДБАР -->
+                <div class="sidebar-container">
+                    <div class="sidebar">
+                        <div class="sidebar__geo">гео</div>
+
+                        <!-- ПАНЕЛЬ "НАЗВАНИЯ СТРАН" ПОД ДРАКОНОМ -->
+                        <div class="dragon-panel__container">
+                            <div class="dragon-panel">
+                                <!-- Контейнер для круглой картинки поверх дракона -->
+                                <div class="dragon-panel__image dragon-panel__image--round"></div>
+                                <div class="dragon-panel__text">
+                                        названия стран
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- СЧЕТЧИКИ -->
+                        <div class="score-container">
+                            <div class="score">
+                                <div class="score__icon score__icon--coins"></div>
+                                <div class="score__text score__text--coins">1402</div>
+                            </div>
+                            <div class="score">
+                                <div class="score__icon score__icon--timer"></div>
+                                <div class="score__text score__text--timer">12:36</div>
+                            </div>
+                            <div class="score score--points">
+                                <div class="score__icon score__icon--points"></div>
+                                <div class="score__text score__text--points">100</div>
+                            </div>
+                        </div>
+
+                        <!-- КНОПКИ (ФУТЕР САЙДБАРА) -->
+                        <div class="sidebar-footer">
+                            <div class="sidebar-footer__button-container">
+                                <div class="sidebar-footer__button sidebar-footer__button--book"></div>
+                            </div>
+                            <div class="sidebar-footer__button-container">
+                                <div class="sidebar-footer__button sidebar-footer__button--message"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- РАМКА С КАРТОЙ И КНОПКАМИ -->
+                <div class="frame-container">
+                    <div class="frame">
+                        <div class="frame__map-container">
+                            <!-- КАРТА -->
+                            <img src="images/map.svg" alt="Карта" class="frame__map-image">
+                        </div>
+
+                        <!-- КНОПКИ (2 ряда по 3) -->
+                        <div class="frame__buttons">
+                            <!-- Верхний ряд -->
+                            <div class="frame__buttons-row">
+                                <!-- Австралия -->
+                                <div class="country-btn__wrapper">
+                                    <div class="country-btn" 
+                                         data-public-id="tzE4-P4wlg-wfyJ"
+                                         data-country-name="Уганда"
+                                         data-country-full="Республика Уганда"
+                                         data-flag-url="/upload/uf/27b/5f231nxhllvso25367p4h60hrw2k1kc1.svg">
+                                        <div class="country-btn__flag">
+                                            <img src="images/Uganda_flag.png" alt="Уганда">
+                                        </div>
+                                        <span class="country-btn__name">уганда</span>
+                                    </div>
+                                </div>
+
+                                <!-- Россия -->
+                                <div class="country-btn__wrapper">
+                                    <div class="country-btn"
+                                         data-public-id="YMV2-wYOQa-A03j"
+                                         data-country-name="Руанда"
+                                         data-country-full="Республика Руанда"
+                                         data-flag-url="/upload/uf/799/j3vul037kmqccz3rukfx4h5xox7vzfhs.svg">
+                                        <div class="country-btn__flag">
+                                            <img src="images/Ruanda_flag.png" alt="Руанда">
+                                        </div>
+                                        <span class="country-btn__name">руанда</span>
+                                    </div>
+                                </div>
+
+                                <!-- Канада -->
+                                <div class="country-btn__wrapper">
+                                    <div class="country-btn"
+                                         data-public-id="jlZ4-lbUIM-fTPh"
+                                         data-country-name="Южный Судан"
+                                         data-country-full="Республика Южный Судан"
+                                         data-flag-url="/upload/uf/3be/uz46ee22cnhhum2c4a8ay0zws5hv7k82.svg">
+                                        <div class="country-btn__flag">
+                                            <img src="images/Sudan_flag.png" alt="Южный Судан">
+                                        </div>
+                                        <span class="country-btn__name">южный судан</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Нижний ряд -->
+                            <div class="frame__buttons-row">
+                                <!-- США -->
+                                <div class="country-btn__wrapper">
+                                    <div class="country-btn country-btn--incorrect"
+                                         data-public-id="92DP-XelBs-cBGh"
+                                         data-country-name="Замбия"
+                                         data-country-full="Республика Замбия"
+                                         data-flag-url="/upload/uf/244/msb4qpczqfox8pcouz1tq4r2lwoiv3ee.svg">
+                                        <div class="country-btn__flag">
+                                            <img src="images/Zambia_flag.png" alt="Замбия">
+                                        </div>
+                                        <span class="country-btn__name">замбия</span>
+                                    </div>
+                                </div>
+
+                                <!-- Гренландия -->
+                                <div class="country-btn__wrapper">
+                                    <div class="country-btn"
+                                         data-public-id="IrP2-NFDGQ-FIaY"
+                                         data-country-name="Замбия"
+                                         data-country-full="Республика Замбия"
+                                         data-flag-url="/upload/uf/597/7xl94bp7gq3n7s4d4jc53nbv2y4gnfo2.svg">
+                                        <div class="country-btn__flag">
+                                            <img src="images/Zambia_flag.png" alt="Замбия">
+                                        </div>
+                                        <span class="country-btn__name">замбия</span>
+                                    </div>
+                                </div>
+
+                                <!-- Конго -->
+                                <div class="country-btn__wrapper">
+                                    <div class="country-btn"
+                                         data-public-id="0jap-C4Zb2-nXga"
+                                         data-country-name="Конго"
+                                         data-country-full="Демократическая Республика Конго"
+                                         data-flag-url="/upload/uf/d24/ornk6j4f61n6o7lutnbur2otaevxz8ir.svg">
+                                        <div class="country-btn__flag">
+                                            <img src="images/Kongo_flag.png" alt="Конго">
+                                        </div>
+                                        <span class="country-btn__name">др конго</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>   
+</body>
+</html>

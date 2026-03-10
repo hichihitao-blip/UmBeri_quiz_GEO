@@ -1,0 +1,511 @@
+/* ========== АДАПТИВ ========== */
+
+/* Ультра-большие экраны >2400px (+20%) */
+@media screen and (min-width: 2401px) {
+    .header__nav {
+        width: 1355px;
+        height: 101px;
+        gap: 45px;
+        margin-top: 42px;
+    }
+    
+    .main-menu__container {
+        width: 1145px;
+        height: 101px;
+    }
+    
+    .main-menu__logo-container {
+        left: 60px;
+        top: 22px;
+        width: 78px;
+        height: 60px;
+    }
+    
+    .main-menu__links-container {
+        margin-top: 22px;
+    }
+    
+    .nav-link {
+        padding: 19px 36px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    
+    .small-menu__container {
+        width: 190px;
+        height: 92px;
+        margin-top: 10px;
+        padding-right: 16px;
+    }
+    
+    .small-menu__icon--ring img {
+        width: 25px;
+        height: 31px;
+    }
+    
+    .small-menu__icon--profile img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .main-content {
+        margin-top: 84px;
+    }
+    
+    .game-container {
+        width: 1236px;
+        height: 887px;
+    }
+
+    .sidebar-container {
+        height: 800px;
+    }
+    
+    .sidebar {
+        width: 348px;
+        height: 800px;
+        top: 30px;
+    }
+    
+    .frame-container {
+        width: 974px;
+        height: 887px;
+    }
+    
+    .frame__map-container {
+        width: 894px;
+        height: 534px;
+        top: 46px;
+        right: 38px;
+    }
+    
+    .frame__buttons {
+        width: 780px;
+        bottom: 125px;
+        gap: 4px;
+    }
+    
+    .frame__buttons-row {
+        gap: 4px;
+    }
+    
+    .country-btn__wrapper {
+        width: 265px;
+        height: 78px;
+    }
+    
+    .country-btn__name {
+        font-size: 22px;
+    }
+    
+    .country-btn__flag {
+        width: 70px;
+        height: 60px;
+    }
+
+    .sidebar__geo {
+        right: 0px;
+        font-size: 23px;
+        top: 78px;
+    }   
+
+    .dragon-panel__container {
+        top: 120px;
+        left: 47px;
+        width: 247px;
+        height: 177px;
+    }
+
+    .dragon-panel {
+        width: 91%;
+        height: 91%;
+    }
+
+    /* ========== КАРТИНКА ДРАКОНА ========== */
+    .dragon-panel__image {
+    top: 0;
+    left: 35%;
+    width: 165px;         
+    height: 165px;       
+}
+
+    .dragon-panel__text {
+        font-size: 17px;
+        top: 68px;
+        left: 58px;
+    }
+
+    .score-container {
+        top: 261px;
+        left: 12px;
+        width: 270px;
+        height: 350px;
+        gap: 20px;
+    }
+
+    .score {
+        gap: 50px;
+    }
+
+    .score__text {
+        font-size: 27px;
+    }
+
+    .sidebar-footer {
+        width: 310px;
+        height: 175px;
+        bottom: 27px;
+        gap: 6px;
+    }
+
+    .sidebar-footer__button-container {
+        display: flex;
+        width: 74px;
+        height: 75px;
+    }
+}
+
+/* Большие экраны 2100-2400px (+15%) */
+@media screen and (min-width: 2100px) and (max-width: 2400px) {
+    .header__nav {
+        width: 1289px;
+        height: 97px;
+        gap: 38px;
+        margin-top: 40px;
+    }
+    
+    .main-menu__container {
+        width: 1080px;
+        height: 97px;
+    }
+    
+    .main-menu__logo-container {
+        left: 58px;
+        top: 21px;
+        width: 75px;
+        height: 58px;
+    }
+    
+    .main-menu__links-container {
+        margin-top: 25px;
+    }
+    
+    .nav-link {
+        font-size: 15px;
+    }
+    
+    .small-menu__container {
+        width: 171px;
+        height: 89px;
+        margin-top: 10px;
+    }
+    
+    .main-content {
+        margin-top: 81px;
+    }
+    
+    .game-container {
+        width: 1185px;
+        height: 850px;
+    }
+
+    .sidebar-container {
+        height: 766px;
+    }
+    
+    .sidebar {
+        width: 334px;
+        height: 766px;
+        top: 29px;
+    }
+    
+    .frame-container {
+        width: 934px;
+        height: 850px;
+    }
+    
+    .frame__map-container {
+        width: 870px;
+        height: 515px;
+        top: 40px;
+        right: 35px;
+    }
+    
+    .frame__buttons {
+        width: 755px;
+        bottom: 125px;
+        gap: 4px;
+    }
+    
+    .frame__buttons-row {
+        gap: 4px;
+    }
+    
+    .country-btn__wrapper {
+        width: 255px;
+        height: 74px;
+    }
+    
+    .country-btn__name {
+        font-size: 19px;
+        line-height: 20px;
+        padding: 0 30px 4px 10px;
+    }
+    
+    .country-btn__flag {
+        width: 73px;
+        height: 63px;
+        margin-left: 10px;
+    }
+
+    .sidebar__geo {
+        right: 12px;
+        font-size: 22px;
+        top: 73px;
+    }   
+
+    .dragon-panel__container {
+        top: 115px;
+        left: 42px;
+        width: 245px;
+        height: 175px;
+    }
+
+    .dragon-panel {
+        width: 90%;
+        height: 90%;
+    }
+
+    /* ========== КАРТИНКА ДРАКОНА ========== */
+    .dragon-panel__image {
+    left: 36%;
+    width: 155px;         
+    height: 155px;       
+}
+
+    .dragon-panel__text {
+        font-size: 16px;
+        top: 66px;
+        left: 60px;
+    }
+
+    .score-container {
+        top: 262px;
+        left: 16px;
+        width: 255px;
+        height: 310px;
+        gap: 36px;
+    }
+
+    .score {
+        gap: 45px;
+    }
+
+    .score__text {
+        font-size: 26px;
+    }
+
+    .sidebar-footer {
+        width: 300px;
+        height: 175px;
+        bottom: 20px;
+        gap: 4px;
+    }
+
+    .sidebar-footer__button-container {
+        display: flex;
+        width: 72px;
+        height: 73px;
+    }
+}
+
+/* ========== АДАПТИВ ДЛЯ ЭКРАНОВ 1200px - 1600px ========== */
+@media screen and (max-width: 1600px) and (min-width: 1200px) {
+    .header__nav {
+        width: 1000px;
+        height: 70px;
+        gap: 28px;
+        margin-top: 30px;
+    }
+    
+    .main-menu__container {
+        width: 770px;
+        height: 68px;
+    }
+    
+    .main-menu__logo-container {
+        left: 42px;
+        top: 15px;
+        width: 52px;
+        height: 40px;
+    }
+    
+    .main-menu__links-container {
+        margin-top: 15px;
+        margin-left: 17%;
+    }
+    
+    .nav-link {
+        padding: 12px 24px;
+        font-size: 11px;
+        line-height: 18px;
+    }
+    
+    .small-menu__container {
+        width: 135px;
+        height: 65px;
+        margin-top: 12px;
+    }
+
+    .small-menu {
+        height: 90%;
+        width: 90%;
+        padding-right: 4px;
+    }
+    
+    .small-menu__icon--ring img {
+        width: 18px;
+        height: 22px;
+    }
+    
+    .small-menu__icon--profile img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .main-content {
+        margin-top: 40px;
+    }
+    
+    .game-container {
+        width: 870px;
+        height: 615px;
+    }
+
+    .sidebar-container {
+        width: 250px;
+        height: 585px;
+        top: 0px;
+    }
+
+    .sidebar {
+        height: 585px;
+    }
+
+    .frame-container {
+        width: 680px;
+        height: 615px;
+    }
+
+    .frame {
+        width: 100%;
+        height: 100%;
+   }
+    
+    .frame__map-container {
+        width: 620px;
+        height: 385px;
+        top: 27px;
+        right: 27px;
+    }
+    
+    .frame__buttons {
+        width: 537px;
+        bottom: 87px;
+        gap: 2px;
+        transform: translateX(-50%);
+    }
+    
+    .frame__buttons-row {
+        gap: 0px;
+    }
+    
+    .country-btn__wrapper {
+        width: 178px;
+        height: 52px;
+    }
+    
+    .country-btn {
+        gap: 0px;
+        padding: 0px;
+        border-radius: 4px;
+    }
+    
+    .country-btn__flag {
+        width: 51px;
+        height: 43px;
+        border-radius: 7px;
+        margin-left: 5px;
+    }
+    
+    .country-btn__name {
+        font-size: 12px;
+        line-height: 15px;
+        padding-right: 8px;
+        padding-bottom: 3px;
+    }
+
+    .sidebar__geo {
+        right: 36px;
+        font-size: 18px;
+        top: 57px;
+    }   
+
+    .dragon-panel__container {
+        top: 92px;
+        left: 26px;
+        width: 257px;
+        height: 165px;
+    }
+
+    .dragon-panel {
+        width: 68%;
+        height: 68%;
+    }
+
+        /* ========== КАРТИНКА ДРАКОНА ========== */
+    .dragon-panel__image {
+    position: absolute;
+    top: -2px;
+    left: 37%;
+    width: 122px;         
+    height: 122px;       
+}
+
+    .dragon-panel__text {
+        font-size: 12px;
+        top: 47px;
+        left: 48px;
+    }
+
+    .score-container {
+        top: 203px;
+        left: 20px;
+        right: 0;
+        width: 155px;
+        height: 230px;
+        gap: 29px;
+    }
+
+    .score {
+        gap: 30px;
+    }
+
+    .score__text {
+        font-size: 18px;
+    }
+
+    .sidebar-footer {
+        width: 218px;
+        height: 140px;
+        bottom: 15px;
+        left: 2px;
+        gap: 4px;
+    }
+
+    .sidebar-footer__button-container {
+        display: flex;
+        width: 53px;
+        height: 54px;
+    }
+}

@@ -1,0 +1,631 @@
+/* Fallback для старых браузеров */
+@supports not (mask: url()) {
+    .frame__map-container {
+        border: 2px solid #000; /* запасной вариант */
+    }
+}
+
+/* ========== ПЕРЕМЕННЫЕ ========== */
+:root {
+    /* повторяющиеся цвета */
+    --color-text-primary-nav: #B3A288;
+    --color-text-title-window: #545E6F;
+    --color-text-sidebar: #FFF7E966;
+    --color-text-score: rgba(255, 247, 233, 0.5);
+
+    /* типографика */
+    --font-primary: 'Hayate', sans-serif;
+    --font-size-xs: clamp(10px, 12px, 13px);
+    --font-size-sm: 15px;
+    --font-size-md: 20px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+    --font-size-xxl: 40px;
+
+    /* тени */
+    --text-shadow-nav: -2px 2px 4px rgba(0, 0, 0, 0.91);
+}
+
+
+/* ========== БАЗОВЫЕ СТИЛИ ========== */
+
+* {
+    box-sizing: border-box;
+    font-family: 'hayate', sans-serif;
+    padding: 0;
+}
+
+/* ========== ПОДКЛЮЧЕНИЕ ШРИФТА ========== */
+@font-face {
+    font-family: 'hayate';
+    src: url('fonts/hayate-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ========== ОСНОВНЫЕ СТИЛИ ========== */
+body {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/geo_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+}
+
+/* ========== ХЕДЕР ========== */
+.header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1121px;
+    height: 84px;
+    gap: 33px;
+    margin-top: 35px;
+}
+
+.main-menu__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 939px;
+    height: 84px;
+    z-index: 10;
+}
+
+.main-menu {
+    background-image: url('images/main_menu_for_1920px.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.main-menu__logo-container {
+    position: absolute;
+    left: 50px;
+    top: 18px;
+    width: 65px;
+    height: 50px;
+}
+
+.main-menu__logo {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/umberi_logo_for_1920px.svg");
+    background-size: cover;
+}
+
+.main-menu__links-container {
+    display: flex;
+    margin-top: 18px;
+    width: 80%;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 18.5%;
+}
+
+.nav-link {
+    padding: 16px 30px;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    text-shadow: var(--text-shadow-nav);
+}
+
+.nav-link--trainers,
+.nav-link--about {
+    color: var(--color-text-primary-nav);
+}
+
+.nav-link--workouts {
+    color: #EAD4B1;
+}
+
+.nav-link--create {
+    color: #FFFBF4;
+}
+
+.small-menu__container {
+    position: relative;
+    right: 0;
+    width: 149px;
+    height: 77px;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+.small-menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/small_menu_for_1920px.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.small-menu__icon--ring img {
+    width: 21px;
+    height: 26px;
+}
+
+.small-menu__icon--profile img {
+    width: 21px;
+    height: 21px;
+}
+
+.main-content {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+/* ========== КОНТЕЙНЕРЫ ========== */
+.game-container {
+    position: relative;
+    width: 1030px;
+    height: 739px;
+    margin: 0 auto;
+}
+
+.sidebar-container {
+    position: relative;
+    left: 0;
+    top: 0px;
+    width: 290px;
+    height: 668px;
+    z-index: 10;
+}
+
+.sidebar {
+    background: url('images/sidebar_dragon.png') center/cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar__geo {
+    position: absolute;
+    right: 45px;
+    top: 63px;
+    transform: rotate(-20deg);
+    font-style: bold;
+    font-size: 21px;
+    letter-spacing: 0.1px;
+    color: rgba(161, 176, 194, 0.72);
+    -webkit-text-stroke: 0.5px #384655;
+        /* Fallback для Firefox */
+    text-shadow: 
+        -0.5px -0.5px 0 #384655,
+         0.5px -0.5px 0 #384655,
+        -0.5px  0.5px 0 #384655,
+         0.5px  0.5px 0 #384655;
+}
+
+.dragon-panel__container {
+    position: relative;
+    width: 255px;
+    height: 180px;
+    top: 100px;
+    left: 37px;
+}
+
+.dragon-panel {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    background: url('images/ground_for_sidebar.png') center/cover;
+    z-index: 1001;
+}
+
+    /* ========== КАРТИНКА ДРАКОНА ========== */
+    .dragon-panel__image {
+    position: absolute;
+    top: 0;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    width: 135px;         
+    height: 135px;       
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+    /* Здесь вставлять ссылку на картинку/гифку */
+.dragon-panel__image--round {
+    background-image: url('images/dragon.gif');  /* <-- ССЫЛКА ТОЛЬКО ЗДЕСЬ */
+    
+    /* Опционально: обводка */
+    border: 3px solid rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+    /* Для разных состояний */
+.dragon-panel__image--round[data-state="happy"] {
+    background-image: url('images/dragon_happy.gif');
+    border-color: #4CAF50;
+}
+
+.dragon-panel__image--round[data-state="sad"] {
+    background-image: url('images/dragon_sad.gif');
+    border-color: #F44336;
+}
+
+/* ========== ТЕКСТ НА ПАНЕЛИ ПОД ДРАКОНОМ ========== */
+.dragon-panel__text {
+    position: absolute;
+    color: #7C8EA2;
+    top: 56px;
+    left: 47px;
+    transform: rotate(-20deg);
+    font-size: 14px;
+    text-shadow: -1px 1px 2.7px rgba(0, 0, 0, 0.4);
+    -webkit-text-stroke: 0.5px #203143;
+    z-index: 1002;
+        /* Fallback для Firefox */
+    text-shadow: 
+        -1px 1px 2.7px rgba(0, 0, 0, 0.4),
+        -0.5px -0.5px 0 #203143,
+         0.5px -0.5px 0 #203143,
+        -0.5px  0.5px 0 #203143,
+         0.5px  0.5px 0 #203143;
+}
+
+/* ========== СЧЕТЧИКИ ========== */
+.score-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 25px;
+    right: 0;
+    top: 238px;
+    width: 185px;
+    height: 250px;
+    gap: 36px;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+    width: 100%;
+    padding-right: 26%;
+}
+
+.score--points {
+    gap: 38px;
+    padding-right: 31%;
+}
+
+.score__icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.score__text {
+    color: var(--color-text-score);
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    -webkit-text-stroke: 1px rgba(24, 31, 47, 1);
+    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.59);
+        /* Fallback для Firefox (обводка + тень) */
+
+    white-space: nowrap;
+    font-style: normal;
+}
+
+.score__icon--coins {
+    background-image: url(images/coins.svg);
+}
+
+.score__icon--timer {
+    background-image: url(images/timer.svg);
+}
+
+.score__icon--points {
+    background-image: url(images/puzzle.svg);
+}
+
+/* ========== КНОПКИ (ФУТЕР САЙДБАРА) ========== */
+.sidebar-footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 187px;
+    bottom: 0;
+    gap: 4px;
+}
+
+.sidebar-footer__button-container {
+    display: flex;
+    width: 63px;
+    height: 64px;
+}
+
+.sidebar-footer__button--book {
+    background-image: url('images/sidebar_button_book.svg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-footer__button--book:hover {
+    background-image: url('images/sidebar_book--hover.svg');
+    width: 95%;
+    height: 95%;
+    background-position: center;
+}
+
+.sidebar-footer__button--book:active {
+    background-image: url('images/sidebar_book--active.svg');
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-footer__button--message {
+    background-image: url('images/sidebar_button_message.svg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar-footer__button--message:hover {
+    background-image: url('images/sidebar_message--hover.svg');
+    width: 95%;
+    height: 95%;
+    background-position: center;
+}
+
+.sidebar-footer__button--message:active {
+    background-image: url('images/sidebar_message--active.svg');
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== РАМКА ========== */
+.frame-container {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 812px;
+    height: 739px;
+    z-index: 20;
+}
+
+.frame {
+    background: url('images/frame_for_1920px.png') center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/frame_for_1920px.png') center/cover no-repeat;
+    z-index: 25;
+    pointer-events: none;
+}
+
+.frame__map-container {
+    position: absolute;
+    top: 38px;
+    right: 32px;
+    width: 745px;
+    height: 445px;
+    overflow: hidden;
+    mask: url('images/mask_frame_window.png') center/cover;
+    -webkit-mask: url('images/mask_frame_window.png') center/cover;
+    z-index: 10;
+    mask-type: alpha;
+}
+
+.frame__map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========== КОНТЕЙНЕРЫ КНОПОК ========== */
+.frame__buttons {
+    position: absolute;
+    bottom: 105px;
+    left: 50%;
+    transform: translateX(-49%);
+    width: 656px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px 0px;
+    z-index: 40;
+}
+
+.frame__buttons-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 0px;
+    width: 100%;
+}
+
+.country-btn__wrapper {
+    width: 216px;
+    height: 68px;
+}
+
+/* ========== UI-КОМПОНЕНТЫ ========== */
+.country-btn {
+    display: flex;
+    align-items: center;
+    gap: 0px 0px;
+    width: 100%;
+    height: 100%;
+    background: url('https://s10.iimage.su/s/25/gecieLVxwzkXhVibPTupsiAy169DzjFTdsHpwRuRI.png') center/cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.country-btn:hover {
+    background-image: url('https://s10.iimage.su/s/25/gkfXCT7xdrRXqpThZHzleqAYhqeC8dBkfX5KWMu4P.png');
+}
+
+.country-btn:active {
+    background-image: url('https://s10.iimage.su/s/25/gLjk7TDxEEq3gXPQR8Rz0orCJoCB28z1CKp8IiYhz.png');
+}
+
+.country-btn--correct {
+    background-image: url('https://s10.iimage.su/s/25/guZwSq1xQbvcal8pbGMuILAViNjGycJU6ajsoYVeY.png') !important;
+}
+
+.country-btn--incorrect {
+    background-image: url('https://s10.iimage.su/s/25/gFouWl8xarBDyqHypa1kMOYJqULREUDmwFzkXoIUt.png') !important;
+}
+
+.country-btn__flag {
+    width: 69px;
+    height: 59px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.country-btn__flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.country-btn__name {
+    flex: 1;
+    font-size: 16px;
+    color: #E4EFFF;
+    text-align: center;
+    line-height: 19px;
+    padding-bottom: 24px;
+    margin-bottom: 2px;
+    white-space: normal;
+    padding: 0 10% 0 5%;
+    letter-spacing: 0.1px;
+    text-shadow: 
+        -1.5px -1.5px 0 #000,
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000,
+        -1.5px 0 0 #000,
+         1.5px 0 0 #000,
+         0 -1.5px 0 #000,
+         0 1.5px 0 #000;
+}
+
+/* ========== ОТКЛЮЧАЕМ ВЫДЕЛЕНИЕ ТЕКСТА НА КНОПКАХ ========== */
+.country-btn, 
+.country-btn__name {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* ========== СОСТОЯНИЯ ТЕКСТА ========== */
+.country-btn:hover .country-btn__name {
+    color: #FFFDE9;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.country-btn:active .country-btn__name {
+    color: #E4EFFF;
+    transform: scale(0.98);
+}
+
+.country-btn--correct .country-btn__name {
+    color: #D8FFE5;
+    text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.country-btn--incorrect .country-btn__name {
+    color: #FFD5F7;
+    text-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
+}
+
+.country-btn--correct:hover .country-btn__name,
+.country-btn--correct:active .country-btn__name,
+.country-btn--incorrect:hover .country-btn__name,
+.country-btn--incorrect:active .country-btn__name {
+    transform: none;
+}
+
+/* ========== СОСТОЯНИЯ ФЛАГА ========== */
+.country-btn:hover .country-btn__flag {
+    opacity: 1;
+    transition: all 0.3 ease-in-out;
+}
+
+.country-btn:active .country-btn__flag {
+    opacity: 0.6;
+    filter: brightness(0.8) contrast(1.2);
+    transition: all 0.3 ease-in-out;
+}
+
+.country-btn--correct .country-btn__flag {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.5));
+}
+
+.country-btn--incorrect .country-btn__flag {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 5px rgba(244, 67, 54, 0.5));
+}
+
+.country-btn--correct:hover .country-btn__flag,
+.country-btn--correct:active .country-btn__flag,
+.country-btn--correct:hover .country-btn__name,
+.country-btn--correct:active .country-btn__name {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    color: #D8FFE5;
+    text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.country-btn--incorrect:hover .country-btn__flag,
+.country-btn--incorrect:active .country-btn__flag,
+.country-btn--incorrect:hover .country-btn__name,
+.country-btn--incorrect:active .country-btn__name {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    color: #FFD5F7;
+    text-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
+}
